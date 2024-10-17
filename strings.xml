@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">terminator</string>
+    <string name="ques">Question \n\t\tpaper</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chat">QChat</string>
+    <string name="tt">Time\nTable</string>
+    <string name="c1">https://youtu.be/DuSbZoh_7TI?si=3NaCvJL66X1Xrtzi</string>
+    <string name="c2">https://youtu.be/vg_2FkWgL04?si=wT-PEuGltHZzsbcN</string>
+    <string name="c3">https://youtu.be/PKFvMIa37tY?si=6yBI-EDFkPER1w2e</string>
+    <string name="c4">https://youtu.be/b2opIFiOpGw?si=Perlre5AHYgrdsdD</string>
+    <string name="c5">https://youtu.be/xDCj8RM5OTg?si=OqD6FgpPLiHCyRTE</string>
+    <string name="c6">https://youtu.be/NslZK-3RJXo?si=yjlXHIYBsNdEjUXb</string>
+    <string name="c7">https://youtu.be/98wHiXX_jmk?si=cEdMXcu_yw1oPEAh</string>
+    <string name="c8">https://youtu.be/PlM82pVD6xE?si=0qQzLsgPa_z3kit3</string>
+    <string name="c9">https://youtu.be/XGAQgVKw1GI?si=cOq3T4LjDAQgviTI</string>
+    <string name="c10">https://youtu.be/6x63PnU4Llg?si=RnXIy0mAq5K0c6Bq</string>
+</resources>
