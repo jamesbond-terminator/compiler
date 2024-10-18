@@ -7,7 +7,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="178dp"
-        android:background="@drawable/home_frame" >
+        android:background="@drawable/home_frame">
 
         <TextView
             android:id="@+id/textView"
@@ -45,106 +45,190 @@
                 android:id="@+id/notificationIcon"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:contentDescription="notification_icon"
-                android:src="@drawable/noti" />
+                android:contentDescription="Notification icon"
+                android:src="@drawable/bell" />
         </FrameLayout>
     </FrameLayout>
 
-    <!-- Books -->
-    <FrameLayout
-        android:id="@+id/book"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="start"
-        android:layout_marginLeft="30dp"
+    <!-- Horizontal layout for Books, Free Class, and Question Papers -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:background="@drawable/book"
-        android:elevation="30dp"
-        android:clickable="true"
-        android:focusable="true">
+        android:gravity="center"
+        android:orientation="horizontal">
 
-        <TextView
+        <!-- Books -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Books"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </FrameLayout>
+            android:layout_gravity="center"
+            android:orientation="vertical">
 
-    <!-- Free Course -->
-    <RelativeLayout
-        android:id="@+id/course"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="start"
-        android:layout_marginLeft="1in"
-        android:layout_marginTop="-90dp"
-        android:background="@drawable/free"
-        android:elevation="30dp"
-        android:clickable="true" />
+            <FrameLayout
+                android:id="@+id/book"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/book"
+                android:clickable="true"
+                android:contentDescription="Books section"
+                android:elevation="30dp"
+                android:focusable="true" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Books"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-
-        <TextView
+        <!-- Free Class -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="start"
-            android:text="Free Class"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="1in"/>
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="vertical"> <!-- Added margin for spacing -->
 
+            <FrameLayout
+                android:id="@+id/course"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/free"
+                android:clickable="true"
+                android:contentDescription="Free Class section"
+                android:elevation="30dp"
+                android:focusable="true" />
 
-    <!-- Question Papers -->
-    <RelativeLayout
-        android:id="@+id/paper"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="start"
-        android:layout_marginLeft="1.8in"
-        android:background="@drawable/ques1"
-        android:elevation="30dp"
-        android:layout_marginTop="-105dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Free Class"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
+        <!-- Question Papers -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/paper"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/ques"
+                android:clickable="true"
+                android:contentDescription="Question Papers section"
+                android:elevation="30dp"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/ques"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="start"
-        android:layout_marginLeft="1.8in"
-        android:text="Question Papers"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:gravity="center">
 
+        <!-- Books -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
 
+            <FrameLayout
+                android:id="@+id/result"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/re"
+                android:elevation="30dp"/>
 
-    <!-- result -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Result"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+        </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/result"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="start"
-        android:layout_marginLeft="30dp"
-        android:background="@drawable/re"
-        android:elevation="30dp"
-        android:layout_marginTop="5dp"/>
+        <!-- Free Class -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"> <!-- Added margin for spacing -->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="35dp"
-        android:gravity="start"
-        android:text="Result"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+            <FrameLayout
+                android:id="@+id/chat"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/chat"
+                android:elevation="30dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Free Class section" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open Chat"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+        </LinearLayout>
 
+        <!-- Question Papers -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
 
+            <FrameLayout
+                android:id="@+id/time"
+                android:layout_width="87dp"
+                android:layout_height="80dp"
+                android:background="@drawable/time"
+                android:clickable="true"
+                android:contentDescription="Question Papers section"
+                android:elevation="30dp"
+                android:focusable="true" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/tt"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
