@@ -1,13 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    tools:context=".paper">
+
+<FrameLayout
+    android:id="@+id/fb"
+    android:layout_width="match_parent"
+    android:layout_height="1000dp"
+    android:background="@drawable/bgg1">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Announcement Fragment"
-        android:textSize="24sp" />
-</LinearLayout>
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="60dp"
+        android:text="ANNOUNCEMENTS"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="732dp"
+        android:background="@drawable/an1">
+
+        <LinearLayout
+            android:id="@+id/c2"
+            android:layout_width="366dp"
+            android:layout_height="500dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginEnd="30dp">
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>
+
+</FrameLayout>
