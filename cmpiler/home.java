@@ -1,74 +1,259 @@
-package com.jamesbond.terminator;
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.SearchView;
-import android.widget.TextView;
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignBottom="@+id/textview"
+        android:layout_marginBottom="-122dp"
+        android:background="@drawable/bg_view" />
 
-public class home extends Fragment {
+    <FrameLayout
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:layout_marginTop="20dp"
+        android:focusable="true">
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the correct layout
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
-
-        // Initialize views using the inflated view with the correct types
-        TextView textView = view.findViewById(R.id.textView); // Correct type
-        SearchView searchView = view.findViewById(R.id.searchView); // Correct type
-        ImageView notificationIcon = view.findViewById(R.id.notificationIcon);
-        FrameLayout bookFrame = view.findViewById(R.id.book);
-        FrameLayout course = view.findViewById(R.id.course); // This should remain FrameLayout
-        FrameLayout paper = view.findViewById(R.id.paper); // This should remain FrameLayout
-        FrameLayout result = view.findViewById(R.id.result); // This should remain FrameLayout
-        FrameLayout tt = view.findViewById(R.id.time);
-
-        // Set up click listeners
-        bookFrame.setOnClickListener(v -> {
-            Fragment bookFragment = new book(); // Make sure this class exists
-            ((MainActivity) getActivity()).loadFragment(bookFragment);
-        });
-
-        course.setOnClickListener(v -> {
-            Fragment courseFragment = new course(); // Make sure this class exists
-            ((MainActivity) getActivity()).loadFragment(courseFragment);
-        });
-
-        paper.setOnClickListener(v -> {
-            Fragment paperFragment = new paper(); // Make sure this class exists
-            ((MainActivity) getActivity()).loadFragment(paperFragment);
-        });
-
-        result.setOnClickListener(v -> {
-            String url = "https://coe1.annauniv.edu/home/";
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-            startActivity(intent);
-        });
-
-        notificationIcon.setOnClickListener(v -> {
-            notidialog notificationFragment = new notidialog(); // Make sure this class exists
-            notificationFragment.setCancelable(true);
-            notificationFragment.show(getChildFragmentManager(), "notificationFragment");
-        });
-
-        //tt
-
-        tt.setOnClickListener(v -> {
-            Fragment ttfragment = new tt();
-            ((MainActivity) getActivity()).loadFragment(ttfragment);
-        });
+        <ImageView
+            android:id="@+id/notificationIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="Notification icon"
+            android:src="@drawable/bell" />
+    </FrameLayout>
 
 
-        return view; // Return the inflated view
-    }
-}
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="4"
+        android:columnCount="2"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/top_view">
+        
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="8dp"
+            app:cardElevation="12dp"
+            android:layout_columnWeight="1">
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/book"
+            android:orientation="vertical">
+    
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/book"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BOOKS"
+                android:layout_gravity="center_horizontal"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="8dp"
+            app:cardElevation="12dp"
+            android:layout_columnWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:id="@+id/course"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/youtube"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Y-CLASS"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="8dp"
+            app:cardElevation="12dp"
+            android:layout_columnWeight="1">
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/result"
+            android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/results"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RESULTS"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="8dp"
+            app:cardElevation="12dp"
+            android:layout_columnWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:id="@+id/paper"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/question"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Q-PAPER"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="8dp"
+            app:cardElevation="12dp"
+            android:layout_columnWeight="1">
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/time"
+            android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/time"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="T-TABLE"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="8dp"
+            app:cardElevation="12dp"
+            android:layout_columnWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:id="@+id/chat"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/openchat"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OP-CHAT"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DashBoard"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/baseline_density_medium_24"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="20dp" />
+
+
+    </RelativeLayout>
