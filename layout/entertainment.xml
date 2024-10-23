@@ -1,64 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:layout_marginTop="25dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+  <WebView
+      android:layout_width="match_parent"
+      android:layout_height="250sp"
+      android:id="@+id/webView" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+  <WebView
+      android:layout_width="match_parent"
+      android:layout_height="250sp"
+      android:id="@+id/webView1"
+      android:layout_below="@+id/webView" />
 
 
-            <WebView
-            android:layout_width="match_parent"
-            android:layout_height="250sp"
-            android:id="@+id/webView1"/>
+  <WebView
+      android:layout_width="match_parent"
+      android:layout_height="250sp"
+      android:id="@+id/webView2"
+      android:layout_below="@+id/webView1" />
 
-            <WebView
-            android:layout_width="match_parent"
-            android:layout_height="250sp"
-            android:id="@+id/webView2"
-            android:layout_below="@+id/webView1"/>
+  <WebView
+      android:layout_width="match_parent"
+      android:layout_height="250sp"
+      android:id="@+id/webView3"
+      android:layout_below="@+id/webView2" />
 
-            <WebView
-             android:layout_width="match_parent"
-             android:layout_height="250sp"
-             android:id="@+id/webView3"
-             android:layout_below="@+id/webView2"/>
+  <WebView
+      android:layout_width="match_parent"
+      android:layout_height="250sp"
+      android:id="@+id/webView4"
+      android:layout_below="@+id/webView3" />
 
-            <WebView
-            android:layout_width="match_parent"
-            android:layout_height="250sp"
-            android:id="@+id/webView4"
-            android:layout_below="@+id/webView3"/>
+  <WebView
+      android:layout_width="match_parent"
+      android:layout_height="250sp"
+      android:id="@+id/webView5"
+      android:layout_below="@+id/webView4" />
 
-            <WebView
-                android:layout_width="match_parent"
-                android:layout_height="250sp"
-                android:id="@+id/webView5"
-                android:layout_below="@+id/webView4"/>
+  <WebView
+      android:layout_width="match_parent"
+      android:layout_height="250sp"
+      android:id="@+id/webView6"
+      android:layout_below="@+id/webView5" />
 
-            <WebView
-                android:layout_width="match_parent"
-                android:layout_height="250sp"
-                android:id="@+id/webView6"
-                android:layout_below="@+id/webView5"/>
+  <WebView
+      android:layout_width="match_parent"
+      android:layout_height="250sp"
+      android:id="@+id/webView7"
+      android:layout_below="@+id/webView6" />
 
-            <WebView
-                android:layout_width="match_parent"
-                android:layout_height="250sp"
-                android:id="@+id/webView7"
-                android:layout_below="@+id/webView6"/>
+  <WebView
+      android:layout_width="match_parent"
+      android:layout_height="250sp"
+      android:id="@+id/webView8"
+      android:layout_below="@+id/webView7" />
 
-        </RelativeLayout>
-    </ScrollView>
+  <WebView
+      android:layout_width="match_parent"
+      android:layout_height="250sp"
+      android:id="@+id/webView9"
+      android:layout_below="@+id/webView8" />
+
+  <WebView
+      android:layout_width="match_parent"
+      android:layout_height="250sp"
+      android:id="@+id/webView10"
+      android:layout_below="@+id/webView9" />
 
 </RelativeLayout>
