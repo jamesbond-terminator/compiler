@@ -19,29 +19,43 @@ public class course extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_course, container, false);
 
-        // Initialize WebViews
+// Initialize WebViews
         webView1 = view.findViewById(R.id.webView1);
         webView2 = view.findViewById(R.id.webView2);
         webView3 = view.findViewById(R.id.webView3);
         webView4 = view.findViewById(R.id.webView4);
         webView5 = view.findViewById(R.id.webView5);
         webView6 = view.findViewById(R.id.webView6);
+        webView7 = view.findViewById(R.id.webView7);
+        webView8 = view.findViewById(R.id.webView8);
+        webView9 = view.findViewById(R.id.webView9);
+        webView10 = view.findViewById(R.id.webView10);
+      
 
-        // Enable JavaScript
+// Enable JavaScript
         enableWebViewSettings(webView1);
         enableWebViewSettings(webView2);
         enableWebViewSettings(webView3);
         enableWebViewSettings(webView4);
         enableWebViewSettings(webView5);
         enableWebViewSettings(webView6);
+        enableWebViewSettings(webView7);
+        enableWebViewSettings(webView8);
+        enableWebViewSettings(webView9);
+        enableWebViewSettings(webView10);
 
-        // Load YouTube video URLs
+
+// Load YouTube video URLs
         webView1.loadUrl("https://youtu.be/V2KCAfHjySQ?si=7TjxSIjsjIsKzq_9");
-        webView2.loadUrl("<iframe width=\"100%\" height=\"100%  \" src=\"https://www.youtube.com/embed/V2KCAfHjySQ?si=xVE1ybr8jJplsdd7\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>");
-        webView3.loadUrl("https://www.youtube.com/embed/YOUR_VIDEO_ID_3");
-        webView4.loadUrl("https://www.youtube.com/embed/YOUR_VIDEO_ID_4");
-        webView5.loadUrl("https://www.youtube.com/embed/YOUR_VIDEO_ID_5");
-        webView6.loadUrl("https://www.youtube.com/embed/YOUR_VIDEO_ID_6");
+        webView2.loadUrl("https://youtu.be/DuSbZoh_7TI?si=BtrZz9HFWL4bWyO3");
+        webView3.loadUrl("https://youtu.be/vg_2FkWgL04?si=NJU4lzdIlJTJ4QjH");
+        webView4.loadUrl("https://youtu.be/PKFvMIa37tY?si=Ah2K5LjMw6JCgP1r");
+        webView5.loadUrl("https://youtu.be/b2opIFiOpGw?si=G-Pwk6SihM_sBaKh");
+        webView6.loadUrl("https://youtu.be/NslZK-3RJXo?si=1N3XdeZ8iSjd5DiN");
+        webView7.loadUrl("https://youtu.be/NslZK-3RJXo?si=Qz6GNwzQ5qUaYgH5");
+        webView8.loadUrl("https://youtu.be/PlM82pVD6xE?si=P3mTExTmF9-6ynEL");
+        webView9.loadUrl("https://youtu.be/XGAQgVKw1GI?si=qJ_WvhArBMXb71z3");
+        webView10.loadUrl("https://youtu.be/6x63PnU4Llg?si=6WfUDCaZOO9tollH");
 
         return view;
     }
